@@ -13,7 +13,7 @@
     "build:js": "mkdir -p www.superdomx/dist/js && webpack -p --config webpack.config.build --colors --progress",
     "watch:js": "mkdir -p www.superdomx/site/js && webpack --watch --colors --progress",
     "build:css": "mkdir -p www.superdomx/dist/css && lessc --clean-css='--s0' --autoprefix='last 2 versions' www.superdomx/src/less/main.less www.superdomx/dist/css/app.css",
-    "watch:css": "mkdir -p www.superdomx/site/css && watch 'lessc www.superdomx/src/less/main.less www.superdomx/site/css/app.css --autoprefix=\"last 2 versions\"' www.superdomx/src/less/ -du",
+    "watch:css": "mkdir -p www.superdomx/site/css && watch 'lessc www.superdomx/src/less/main.less www.superdomx/site/css/app.css --autoprefix=\"last 2 versions\"' www.superdomx/src/less/ -du && grunt watch",
     "build:html": "mkdir -p www.superdomx/dist/ && jade www.superdomx/src/pages -o www.superdomx/dist/",
     "watch:html": "mkdir -p www.superdomx/site/ && jade -w www.superdomx/src/pages -o www.superdomx/site/",
     "clean:build": "rm -Rf www.superdomx/dist/",
