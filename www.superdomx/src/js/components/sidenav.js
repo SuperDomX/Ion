@@ -60,9 +60,9 @@ function view(ctrl) {
           <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
           <ul id="components-collapse" class="panel-collapse collapse ">
               <li class=""><a href="component_calendar.html">Calendar</a></li>
-              <li class=""><a href="component_maps.html" data-no-pjax="">Maps</a></li>
+              <li class=""><a href="component_maps.html" >Maps</a></li>
               <li class=""><a href="component_gallery.html">Gallery</a></li>
-              <li class=""><a href="component_fileupload.html" data-no-pjax="">Fileupload</a></li>
+              <li class=""><a href="component_fileupload.html" >Fileupload</a></li>
               <li class=""><a href="component_bootstrap.html">Bootstrap</a></li>
               <li class=""><a href="component_list_groups.html">List Groups</a></li>
           </ul>
@@ -87,10 +87,10 @@ function view(ctrl) {
               <li class=""><a href="special_search.html">Search <sup class="text-warning fw-bold">new</sup></a></li>
               <li class=""><a href="special_invoice.html">Invoice</a></li>
               <li class=""><a href="special_inbox.html">Inbox &nbsp; <span class="label label-important">3</span></a></li>
-              <li><a target="_blank" href="login.html">Login</a></li>
-              <li><a target="_blank" href="error.html">Error Page</a></li>
-              <li><a href="landing.html" data-no-pjax="">Landing</a></li>
-              <li><a href="../white/index.html" data-no-pjax="">White <sup class="text-warning fw-bold">new</sup></a></li>
+              <li class=""><a href="login.html">Login</a></li>
+              <li class=""><a href="error.html">Error Page</a></li>
+              <li class=""><a href="landing.html" >Landing</a></li>
+              <li><a href="../white/index.html" >White <sup class="text-warning fw-bold">new</sup></a></li>
           </ul>
       </li>
       <li class="panel">

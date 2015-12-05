@@ -4,6 +4,9 @@ body {
   font-weight: 400;
   line-height: 1.25;
 }
+.logo img {
+  max-width: 100%;
+}
 .pos--full-width {
   left: 0;
   right: 0;

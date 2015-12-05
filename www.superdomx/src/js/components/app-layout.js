@@ -23,7 +23,8 @@ function view(ctrl) {
       <SideBar  {...ctrl} />
       <div className="wrap">
         <Header   {...ctrl} />
-        <div class="content container"></div>
+        <div class="content container">
+        </div>
       </div>
     </div>
   );

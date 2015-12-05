@@ -199,7 +199,7 @@ function view(ctrl) {
         <div class="notifications pull-right">
             <div class="alert pull-right">
                 <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-                <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
+                <i class="fa fa-info-circle mr-xs"></i> Check out SuperDomX <a id="notification-link" href="#">settings</a> on the right!
             </div>
         </div>
       </div>
