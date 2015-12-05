@@ -13,7 +13,7 @@
     "build:js": "mkdir -p www.superdomx/dist/js && webpack -p --config webpack.config.build --colors --progress",
     "watch:js": "mkdir -p www.superdomx/site/js && webpack --watch --colors --progress",
     "build:css": "mkdir -p www.superdomx/dist/css && lessc --clean-css='--s0' --autoprefix='last 2 versions' www.superdomx/src/less/main.less www.superdomx/dist/css/app.css",
-    "watch:css": "mkdir -p www.superdomx/site/css && watch 'lessc www.superdomx/src/less/main.less www.superdomx/site/css/app.css --autoprefix=\"last 2 versions\"' www.superdomx/src/less/ -du && grunt watch",
+    "watch:css": "mkdir -p www.superdomx/site/css && watch 'lessc www.superdomx/src/less/main.less www.superdomx/site/css/app.css --autoprefix=\"last 2 versions\"' www.superdomx/src/less/ -du",
     "build:html": "mkdir -p www.superdomx/dist/ && jade www.superdomx/src/pages -o www.superdomx/dist/",
     "watch:html": "mkdir -p www.superdomx/site/ && jade -w www.superdomx/src/pages -o www.superdomx/site/",
     "clean:build": "rm -Rf www.superdomx/dist/",
@@ -24,7 +24,7 @@
     "serve": "grunt && node server/index.js",
     "serve:local": "nodemon server/index.js --ignore www.superdomx/src/ --ignore www.superdomx/site/ --ignore server/public/",
     "test": "npm run specs -- --single-run --reporters dots",
-    "start": "npm run clean:dev && parallelshell 'npm run watch:js' 'npm run watch:html' 'npm run watch:css' 'npm run serve'",
+    "start": "npm run clean:dev && parallelshell 'npm run watch:js' 'npm run watch:html' 'npm run watch:css' 'npm run serve' 'grunt watch'",
     "postinstall": ""
   },
   "babel": {
