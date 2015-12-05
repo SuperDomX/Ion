@@ -127,7 +127,7 @@ function initPjax(){
             setTimeout(function(){
                 view.$loaderWrap.removeClass('hiding');
             }, 0)
-        }, 200);
+        }, 0);
     };
 
     PjaxApp.prototype.hideLoader = function(){
@@ -300,7 +300,6 @@ function initAppPlugins(){
      * ========================================================================
      */
     !function($){
-
         $.fn.animateProgressBar = function () {
             return this.each(function () {
                 var $bar = $(this).find('.progress-bar');

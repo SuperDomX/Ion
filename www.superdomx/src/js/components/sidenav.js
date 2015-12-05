@@ -21,9 +21,9 @@ function view(ctrl) {
     <ul id="side-nav" class="side-nav">
       <li class="active">
           <a href="dashboard.html">
-            <i class="fa fa-eye"></i> 
+            <i class="fa fa-dashboard"></i> 
             <span class="name">
-            Main Dom
+            Dashboard
             </span>
           </a>
       </li>
@@ -90,7 +90,6 @@ function view(ctrl) {
               <li class=""><a href="login.html">Login</a></li>
               <li class=""><a href="error.html">Error Page</a></li>
               <li class=""><a href="landing.html" >Landing</a></li>
-              <li><a href="../white/index.html" >White <sup class="text-warning fw-bold">new</sup></a></li>
           </ul>
       </li>
       <li class="panel">
