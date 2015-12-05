@@ -1,7 +1,7 @@
 var express = require('express');
 var app     = express();
 var server  = require('http').Server(app);
-var site    = (typeof(process.env.NODE_ENV)!='undefined') ? 'dist' : 'site';
+var site    = 'site';
 
 site        = 'www.superdomx/' + site;
 console.log("Server serving: "+site);
