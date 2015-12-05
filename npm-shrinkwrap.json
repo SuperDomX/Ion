@@ -1,6 +1,6 @@
 {
-    "name": "light-blue",
-    "version": "2.2.0",
+    "name": "super-dom-x",
+    "version": "1.0.0",
     "dependencies": {
         "grunt-handlebars-layouts": {
             "version": "0.1.6",
