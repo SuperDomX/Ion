@@ -23,7 +23,7 @@
     "specs"       : "node_modules/karma/bin/karma start",
     "serve"       : "nodemon server/index.js --ignore www.superdomx/src/ --ignore www.superdomx/site/ --ignore server/public/",
     "test"        : "npm run specs -- --single-run --reporters dots",
-    "start"       : "npm run clean:dev && parallelshell 'npm run watch:js' 'npm run watch:html' 'npm run watch:css' 'npm run serve' 'grunt && grunt watch'",
+    "start"       : "npm run clean:dev && parallelshell 'npm run watch:js' 'npm run watch:html' 'npm run watch:css' 'npm run serve' 'grunt' 'grunt watch' ",
     "postinstall" : "npm run build"
   },
   "babel": {

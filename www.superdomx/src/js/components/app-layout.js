@@ -2,7 +2,7 @@ import m from 'mithril';
 
 import SideBar  from './sidebar';
 import Logo     from './logo';
-import TopBar   from './topbar';
+import Header   from './header';
 
 function controller(attrs) {
   let {
@@ -20,9 +20,11 @@ function view(ctrl) {
   return (
     <div>
       <Logo     {...ctrl} />
-      <TopBar   {...ctrl} />
       <SideBar  {...ctrl} />
-      <div class="content"></div>
+      <div className="wrap">
+        <Header   {...ctrl} />
+        <div class="content container"></div>
+      </div>
     </div>
   );
 }
