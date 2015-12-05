@@ -22,6 +22,18 @@
                       https://code.google.com/p/chromium/issues/detail?id=332189
         */
     </script>
+    <!-- common libraries. required for every page-->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-pjax/jquery.pjax.js"></script>
+    <script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="lib/widgster/widgster.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+
+    <!-- common application js -->
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/settings.js"></script>
+
 </head>
 <body class="background-dark">
 {{#block "content"}}
@@ -44,17 +56,9 @@
         </div>
     </div>
 {{/block}}
-<!-- common libraries. required for every page-->
-<script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="lib/jquery-pjax/jquery.pjax.js"></script>
-<script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-<script src="lib/widgster/widgster.js"></script>
-<script src="lib/underscore/underscore.js"></script>
 
-<!-- common application js -->
-<script src="js/application.js"></script>
-<script src="js/settings.js"></script>
-<script src="socket.io/socket.io.js"></script>
+
+
 
 
 <!-- common templates -->
