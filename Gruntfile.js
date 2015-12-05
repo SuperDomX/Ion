@@ -212,6 +212,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dist-watch', ['watch']);
 
+    grunt.registerTask('heroku:development', ['dist-compass', 'dist-templates', 'dist-scripts', 'dist-libs', 'dist-misc']);
+
     // Default task(s)
     grunt.registerTask('default', ['dist-compass', 'dist-templates', 'dist-scripts', 'dist-libs', 'dist-misc']);
 
