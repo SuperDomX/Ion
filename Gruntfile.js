@@ -192,7 +192,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-handlebars-layouts");
 
     // minify scripts for production environment or just copy for development
-    grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
+    grunt.registerTask('dist-scripts', ['copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
 
 
     var distCompass = ['compass:dist', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
@@ -213,6 +213,6 @@ module.exports = function(grunt) {
     grunt.registerTask('dist-watch', ['watch']);
 
     // Default task(s)
-    grunt.registerTask('default', ['clean:all', 'dist-compass', 'dist-templates', 'dist-scripts', 'dist-libs', 'dist-misc']);
+    grunt.registerTask('default', ['dist-compass', 'dist-templates', 'dist-scripts', 'dist-libs', 'dist-misc']);
 
 };
