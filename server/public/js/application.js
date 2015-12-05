@@ -4,18 +4,18 @@ window.DEBUG        = true;
 //colors
 //same as in _variables.scss
 //keep it synchronized
-var $lime = "#8CBF26",
-    $red = "#e5603b",
-    $redDark = "#d04f4f",
-    $blue = "#6a8da7",
-    $green = "#56bc76",
-    $orange = "#eac85e",
-    $pink = "#E671B8",
-    $purple = "#A700AE",
-    $brown = "#A05000",
-    $teal = "#4ab0ce",
-    $gray = "#666",
-    $white = "#fff",
+var $lime  = "#8CBF26",
+    $red       = "#e5603b",
+    $redDark   = "#d04f4f",
+    $blue      = "#6a8da7",
+    $green     = "#56bc76",
+    $orange    = "#eac85e",
+    $pink      = "#E671B8",
+    $purple    = "#A700AE",
+    $brown     = "#A05000",
+    $teal      = "#4ab0ce",
+    $gray      = "#666",
+    $white     = "#fff",
     $textColor = $gray;
 
 //turn off charts is needed
@@ -121,8 +121,9 @@ function initPjax(){
     PjaxApp.prototype.showLoader = function(){
         var view = this;
         this.showLoaderTimeout = setTimeout(function(){
-            view.$content.addClass('hiding');
+            // view.$content.addClass('hiding');
             view.$loaderWrap.removeClass('hide');
+              view.$loaderWrap.removeClass('hiding');
             setTimeout(function(){
                 view.$loaderWrap.removeClass('hiding');
             }, 0)

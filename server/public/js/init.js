@@ -8,7 +8,6 @@
     onMessage   : subscribe.bind(socket, 'chat:message'),
   };
 
-  console.log('test');
   root.SuperDomX.start({
     container : document.body,
     debug     : true,

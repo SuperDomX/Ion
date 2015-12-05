@@ -20,7 +20,7 @@ function view(ctrl) {
   return (
     <ul id="side-nav" class="side-nav">
       <li class="active">
-          <a href="index.html">
+          <a href="dashboard.html">
             <i class="fa fa-eye"></i> 
             <span class="name">
             Main Dom

@@ -13,12 +13,6 @@
     <meta charset="utf-8">
     <script src="js/app.js"></script>
     <script src="js/init.js" defer></script>  
-    <script>
-        /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
-           chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
-                      https://code.google.com/p/chromium/issues/detail?id=332189
-        */
-    </script>
     <!-- common libraries. required for every page-->
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/jquery-pjax/jquery.pjax.js"></script>
@@ -27,12 +21,18 @@
     <script src="lib/underscore/underscore.js"></script>
 
     <!-- common application js -->
-    <script src="socket.io/socket.io.js"></script>
     <script src="js/application.js"></script>
     <script src="js/settings.js"></script>
-
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
+           chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+                      https://code.google.com/p/chromium/issues/detail?id=332189
+        */
+    </script>
 </head>
-<body class="background-dark">
+<body>
+
         <div class="single-widget-container">
             <section class="widget login-widget">
                 <header class="text-align-center">
@@ -80,9 +80,6 @@
                 </footer>
             </section>
         </div>
-
-
-
 
 
 <!-- common templates -->
@@ -136,6 +133,7 @@
 </script>
 
     <!-- page specific scripts -->
+
 
 
 </body>
