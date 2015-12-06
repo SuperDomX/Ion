@@ -349,7 +349,6 @@ $i: 1;
 /**          WIDGET               **/
 /**********************************/
 
-
 .widget{
   @include border-radius($border-radius-base);
   @include box-sizing(content-box);
@@ -442,6 +441,10 @@ $i: 1;
     border-bottom-left-radius: $border-radius-base;
     border-bottom-right-radius: $border-radius-base;
   }
+}
+
+.background-dark .widget{
+  background: $widget-bg-dark;
 }
 
 .widget-controls{
@@ -562,6 +565,7 @@ $i: 1;
     }
   }
 
+
   .search-query{
     color: $widget-color;
     border: none;
@@ -575,6 +579,10 @@ $i: 1;
       width: 240px;
       @include box-shadow(none);
     }
+  }
+ 
+  .background-dark .search-query{
+    background: $widget-bg-dark 5px 5px no-repeat transparentize($widget-bg-dark, .1);
   }
 
   .navbar-form{
