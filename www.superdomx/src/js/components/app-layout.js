@@ -28,6 +28,7 @@ function view(ctrl) {
       <div className="wrap">
         <Header {...ctrl} />
         <div class="content container">
+          <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
           <DashPanel {...ctrl} />
           <Chat {...ctrl} />
         </div>
