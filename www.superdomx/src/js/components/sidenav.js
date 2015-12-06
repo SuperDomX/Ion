@@ -36,15 +36,14 @@ function view(ctrl) {
             </span>
           </a>
       </li>
-      <Components/>
       <UI/>
       <Widgets/>
+      <Components/>
       <Forms/>
       <Tables/>
       <Stats/>
       <Special/>
-      <Menus/>
-      <li class="visible-xs">
+      <li class="">
           <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
       </li>
     </ul>

@@ -381,7 +381,7 @@
         <div class="notifications pull-right">
             <div class="alert pull-right">
                 <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-                <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
+                <i class="fa fa-info-circle mr-xs"></i> Check out SuperDom <a id="notification-link" href="#">settings</a> on the right!
             </div>
         </div>
     </div>
@@ -630,6 +630,47 @@
                 </section>
             </div>
             <div class="col-lg-4">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            Server Overview
+                        </h4>
+                        <div class="actions">
+                            <small class="text-muted pull-right">2 days ago</small>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <ul class="server-stats">
+                            <li>
+                                <div class="key pull-right">CPU</div>
+                                <div class="stat">
+                                    <div class="info">60% / 37&deg;C / 3.3 Ghz</div>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar progress-bar-danger" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key pull-right">Mem</div>
+                                <div class="stat">
+                                    <div class="info">29% / 4GB (16 GB)</div>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar" style="width: 29%;"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key pull-right">LAN</div>
+                                <div class="stat">
+                                    <div class="info">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></div>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar progress-bar-inverse" style="width: 48%;"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
                 <section class="widget large">
                     <header>
                         <h4>
@@ -938,47 +979,6 @@
                         </div>
                     </div>
                 </section>
-                <section class="widget">
-                    <header>
-                        <h4>
-                            Server Overview
-                        </h4>
-                        <div class="actions">
-                            <small class="text-muted pull-right">2 days ago</small>
-                        </div>
-                    </header>
-                    <div class="body">
-                        <ul class="server-stats">
-                            <li>
-                                <div class="key pull-right">CPU</div>
-                                <div class="stat">
-                                    <div class="info">60% / 37&deg;C / 3.3 Ghz</div>
-                                    <div class="progress progress-small">
-                                        <div class="progress-bar progress-bar-danger" style="width: 70%;"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="key pull-right">Mem</div>
-                                <div class="stat">
-                                    <div class="info">29% / 4GB (16 GB)</div>
-                                    <div class="progress progress-small">
-                                        <div class="progress-bar" style="width: 29%;"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="key pull-right">LAN</div>
-                                <div class="stat">
-                                    <div class="info">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></div>
-                                    <div class="progress progress-small">
-                                        <div class="progress-bar progress-bar-inverse" style="width: 48%;"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
             </div>
         </div>
     
@@ -996,8 +996,8 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dusk</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Dawn</button>
         </div>
     </div>
     <div class="setting clearfix">

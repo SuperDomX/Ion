@@ -456,6 +456,10 @@ textarea,
   }
 }
 
+.background-dark .page-header .nav > li > a {
+  color: $nav-tabs-link-color-dark !important;
+}
+
 .nav-tabs > .active{
   margin-bottom: $nav-tabs-active-item-margin;
 }

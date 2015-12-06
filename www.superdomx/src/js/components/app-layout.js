@@ -3,6 +3,7 @@ import m from 'mithril';
 import SideBar  from './sidebar';
 import Logo     from './logo';
 import Header   from './header';
+import Entry   from './entry';
 
 function controller(attrs) {
   let {
@@ -22,8 +23,9 @@ function view(ctrl) {
       <Logo     {...ctrl} />
       <SideBar  {...ctrl} />
       <div className="wrap">
-        <Header   {...ctrl} />
+        <Header {...ctrl} />
         <div class="content container">
+          <Entry {...ctrl} />
         </div>
       </div>
     </div>

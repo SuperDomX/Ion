@@ -196,7 +196,7 @@ function view(ctrl) {
         <form id="search-form" class="navbar-form pull-right" role="search">
           <input type="search" class="form-control search-query" placeholder="Search"/>
         </form>
-        <div class="notifications pull-right">
+        <div class="notifications pull-right hidden-sm">
             <div class="alert pull-right">
                 <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
                 <i class="fa fa-info-circle mr-xs"></i> Check out SuperDomX <a id="notification-link" href="#">settings</a> on the right!
