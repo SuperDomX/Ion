@@ -7,11 +7,17 @@ function controller(attrs) {
 }
 
 function view(ctrl) {
+  var year = new Date().getFullYear();
   return (
     <div className="logo">
       <h4>
-        SuperDom<b>X</b>
-        <sup>ion</sup>
+        <a href="/">
+          SuperDom<sub><b>X</b><sup>ion</sup></sub>
+        </a> 
+        <br/> 
+        <small>
+          &copy; {year}
+        </small>
       </h4>
     </div>
   );

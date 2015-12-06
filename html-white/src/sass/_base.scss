@@ -45,13 +45,12 @@ $i: 1;
 
 .logo{
   @include box-sizing(content-box);
-  position: absolute;
+  position: fixed;
   @media (min-height: 940px) {
     position: fixed;
   }
-  width: 160px;
-  left: 65px;
-  top: 17px;
+  left    : 45px;
+  bottom  : 17px;
   z-index: 1;
   a{
     color: $white;
