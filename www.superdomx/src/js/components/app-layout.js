@@ -3,17 +3,20 @@ import m from 'mithril';
 import SideBar  from './sidebar';
 import Logo     from './logo';
 import Header   from './header';
-import Entry   from './entry';
+import DashPanel   from './dashpanel';
+import Chat       from './chat';
 
 function controller(attrs) {
   let {
     sendMessage,
     messages,
+    widgets,
   } = attrs;
 
   return {
     sendMessage,
     messages,
+    widgets,
   };
 }
 
@@ -25,7 +28,8 @@ function view(ctrl) {
       <div className="wrap">
         <Header {...ctrl} />
         <div class="content container">
-          <Entry {...ctrl} />
+          <DashPanel {...ctrl} />
+          <Chat {...ctrl} />
         </div>
       </div>
     </div>

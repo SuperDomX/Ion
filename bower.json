@@ -45,7 +45,8 @@
     "backbone.paginator": "2.0.2",
     "backgrid-paginator": "https://github.com/wyuenho/backgrid-paginator.git#master",
     "datatables": "1.10.9",
-    "animate.css": "3.4.0"
+    "animate.css": "3.4.0",
+    "masonry": "~3.3.2"
   },
   "private": true,
   "resolutions": {

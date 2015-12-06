@@ -25,7 +25,7 @@ function renderApp() {
 
   function appLayout() {
     return (
-      <AppLayout messages={appState.messages} {...adapter} />
+      <AppLayout messages={appState.messages} widgets={appState.widgets} {...adapter} />
     );
   }
 

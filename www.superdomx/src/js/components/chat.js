@@ -1,4 +1,5 @@
 import m from 'mithril';
+import WidgetControls from './widget-controls';
 import Log from './log';
 
 function controller(attrs) {
@@ -20,16 +21,13 @@ function controller(attrs) {
 function view(ctrl) {
   let { messages } = ctrl;
   return (
-    <div className="col-md-5 pull-right">
+    <div className="col-md-4 widget-container">
       <section class="widget large">
           <header>
               <h4>
-                  Chat
-              </h4>
-              <div class="widget-controls">
-                  <a title="Options" href="#"><i class="glyphicon glyphicon-cog"></i></a>
-                  <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
-              </div>
+                  ShoutBox
+                  </h4>
+                  <WidgetControls />
           </header>
           <div class="body">
               <div id="chat" class="chat">
@@ -56,6 +54,6 @@ function view(ctrl) {
   );
 }
 
-const Entry = { controller, view };
+const Chat = { controller, view };
 
-export default Entry;
+export default Chat;
