@@ -22,11 +22,6 @@ let widgets    = m.prop([
     widget : 'feed',
     grid   : 'col-md-4'
   },
-  {
-    header : 'Shout Box',
-    widget : 'chat',
-    grid   : 'col-md-5'
-  },
 ]);
 
 let appState = {

@@ -41,9 +41,7 @@ function controller(attrs) {
 function view(ctrl) {
   let { widgets, messages } = ctrl;
   return (
-    <div className="row js-masonry" 
-      data-masonry-options='{ "itemSelector": ".widget-container", "columnWidth": 200 }'
-    >
+    <div className="row" >
       { widgets().map(buildWidget) }
     </div>
   );
