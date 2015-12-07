@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  .content
+    include modals/alert
+    include modals/lost-password
+    .single-widget-container
+      section.widget.login-widget
+        header.text-align-center
+          img(style="max-width: 100%",src="/img/logos/sdx.png")
+        .body#login-container
+          form#login-form.no-margin(
+            action="index.html"
+            method="POST"
+          )
+            fieldset
+              .form-group
+                .input-group
+                  span.input-group-addon
+                    i.fa.fa-user
+                  input.form-control.input-lg.input-transparent(
+                    id          = "user-tf"
+                    name        = "user"
+                    type        = "user"
+                    placeholder = "Your User"
+                  )
+              .form-group
+                .input-group
+                  span.input-group-addon
+                    i.fa.fa-lock
+                  input.form-control.input-lg.input-transparent(
+                    id          = "pass-tf"
+                    name        = "pass"
+                    type        = "password"
+                    placeholder = "Your Password"
+                  )
+            .form-actions
+              button#btn-login.btn.btn-lg.btn-block.btn-success(
+                type="submit"
+              )
+                small Power Up
+                span.small-circle
+                  i.fa.fa-bolt
+              label#remember-me.checkbox Remember Me
+                input(type="checkbox", checked='checked')
+              a(href='/signup')#create-account Create An Account
+              a#forgot-password.forgot(
+                href="#"
+              ) Forgot Your Password?
+        footer
+          .facebook-login
+            a(
+              href="index.html"
+            )
+              span Login with Facebook
+                i.fa.fa-facebook-square.fa-lg
+
+      #login-container
+        form( method="post")#login-form.well.span4
+          h1 Hello!
+          p.subheading Please Login To Your Account
+          label Username 
+          input(type="text", name="user", id='user-tf').span4.required
+          label Password
+          input(type="password", name="pass", id='pass-tf').span4.required
+          button(type="submit")#btn-login.btn.btn-primary
+            i.icon-lock.icon-white
+            | Sign in
+          label#remember-me.checkbox Remember Me
+            input(type="checkbox", checked='checked')
+          div.clear-fix
+          hr
+          div.btm-links
+            a(href='#')#forgot-password Forgot Your Password?
+            a(href='/signup')#create-account Create An Account
+
+block scripts
+  script(src='/js/views/login.js')
+  script(src='/js/controllers/loginController.js')
+  script(src='/js/form-validators/loginValidator.js')
+  script(src='/js/form-validators/emailValidator.js')

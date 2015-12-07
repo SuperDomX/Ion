@@ -6,7 +6,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         config: {
-            target: grunt.option('target') || 'www.superdomx', // pass --target=www.superdomx. possible targets: www.superdomx, html-white
+            target: grunt.option('target') || 'www.superdomx', 
+            // pass --target=www.superdomx
             srcFolder: '<%= config.target %>/src',
             siteFolder: '<%= config.target %>/site',
             distFolder: '<%= config.siteFolder %>',
@@ -127,12 +128,12 @@ module.exports = function(grunt) {
                 dest: '<%= config.distFolder %>/css/fonts/font-awesome'
             },
             syncVersionsStyles: {
-                expand: true,
-                cwd: 'www.superdomx/src/sass',
-                src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
-                    '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
-                    '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
-                dest: 'html-white/src/sass'
+                // expand: true,
+                // cwd: 'www.superdomx/src/sass',
+                // src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
+                //     '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
+                //     '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
+                // dest: 'html-white/src/sass'
             }
         },
 

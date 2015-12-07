@@ -8,9 +8,9 @@
     onMessage   : subscribe.bind(socket, 'chat:message'),
   };
 
-  root.SuperDomX.start({
-    container : document.body,
-    debug     : true,
-    adapter   : adapter,
-  });
+  // root.SuperDomX.start({
+  //   container : document.body,
+  //   debug     : true,
+  //   adapter   : adapter,
+  // });
 }(window));
