@@ -185,6 +185,7 @@ function initPjax(){
             $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
             $existingScripts = $('script[src]'),
             $existingTemplates = $('script[type="text/template"]');
+            console.log($scripts);
 
         //append templates first as they are used by scripts
         $templates.each(function() {
@@ -217,12 +218,13 @@ function initPjax(){
                 //noinspection JSPotentiallyInvalidUsageOfThis
                 return this.src === src;
             });
-            if (matchedScripts.length) return;
-
+            // if (matchedScripts.length) return;
             var script = document.createElement('script');
-            script.src = $(this).attr('src');
+            script.src = this.src;
+
             $previous.load(function(){
-                document.body.appendChild(script);
+              console.log('Appending Script: '+src);
+              document.body.appendChild(script);
             });
 
             $previous = $(script);
@@ -230,6 +232,7 @@ function initPjax(){
 
         var view = this;
         $previous.load(function(){
+            console.log();
             $(document).trigger('pjax-app:loaded');
             view.log('scripts loaded.');
         })
