@@ -44,7 +44,10 @@ function view(ctrl) {
       <Stats/>
       <Special/>
       <li class="">
-          <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
+        <a href="login">
+          <i class="fa fa-sign-out"></i> 
+          <span class="name">Sign Out</span>
+        </a>
       </li>
     </ul>
   );

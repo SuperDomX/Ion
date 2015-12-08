@@ -20,7 +20,10 @@ function view(ctrl) {
   return (
     <header class="page-header">
       <div class="navbar">
-        <ul class="nav navbar-nav navbar-right pull-right">
+        <form id="search-form" class="navbar-form pull-left" role="search">
+          <input type="search" class="form-control search-query" placeholder="Search"/>
+        </form>
+        <ul class="nav navbar-nav navbar-left">
           <li class="visible-phone-landscape">
             <a href="#" id="search-toggle">
                 <i class="fa fa-search"></i>
@@ -175,7 +178,7 @@ function view(ctrl) {
                       </a>
                   </li>
                   <li role="presentation">
-                      <a href="#" class="link">
+                      <a href="special_inbox.html" class="link">
                           <i class="fa fa-inbox"></i>
                           Inbox
                       </a>
@@ -193,13 +196,10 @@ function view(ctrl) {
           </li>
           <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
         </ul>
-        <form id="search-form" class="navbar-form pull-right" role="search">
-          <input type="search" class="form-control search-query" placeholder="Search"/>
-        </form>
         <div class="notifications pull-right hidden-sm">
             <div class="alert pull-right">
                 <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-                <i class="fa fa-info-circle mr-xs"></i> Check out SuperDomX <a id="notification-link" href="#">settings</a> on the right!
+                <i class="fa fa-info-circle mr-xs"></i> Be sure to configure your <a id="notification-link" href="#">menu</a>!
             </div>
         </div>
       </div>

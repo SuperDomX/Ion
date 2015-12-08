@@ -32,6 +32,11 @@ block content
                     type        = "password"
                     placeholder = "Your Password"
                   )
+              .form-group
+                .checkbox.checkbox-info
+                  input(type="checkbox",id="remember", checked='checked')
+
+                  label.checkbox(for="remember") Remember Me
             .form-actions
               button#btn-login.btn.btn-lg.btn-block.btn-success(
                 type="submit"
@@ -39,8 +44,6 @@ block content
                 small Power Up
                 span.small-circle
                   i.fa.fa-bolt
-              label#remember-me.checkbox Remember Me
-                input(type="checkbox", checked='checked')
               a(href='/signup')#create-account Create An Account
               a#forgot-password.forgot(
                 href="#"

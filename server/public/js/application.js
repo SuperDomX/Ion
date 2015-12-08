@@ -59,23 +59,23 @@ function resetContentMargin(){
 
 function initPjax(){
     var PjaxApp = function(){
-        this.pjaxEnabled = window.PJAX_ENABLED;
-        this.debug = window.DEBUG;
-        this.$sidebar = $('#sidebar');
-        this.$content = $('.content');
-        this.$loaderWrap = $('.loader-wrap');
-        this.pageLoadCallbacks = {};
-        this.loading = false;
+        this.content            = '.content';
+        this.pjaxEnabled        = window.PJAX_ENABLED;
+        this.debug              = window.DEBUG;
+        this.$sidebar           = $('#sidebar');
+        this.$content           = $(this.content);
+        this.$loaderWrap        = $('.loader-wrap');
+        this.pageLoadCallbacks  = {};
+        this.loading            = false;
 
         this._resetResizeCallbacks();
         this._initOnResizeCallbacks();
 
         if (this.pjaxEnabled){
-
             //prevent pjaxing if already loading
             this.$sidebar.find('a:not(.accordion-toggle):not([data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar a:not(.accordion-toggle):not([data-no-pjax])', '.content', {
-                fragment: '.content',
+            $(document).pjax('a:not(.accordion-toggle):not([data-no-pjax])', this.content, {
+                fragment: this.content,
                 type: 'GET', //use POST to prevent caching when debugging,
                 timeout: 10000
             });
@@ -180,12 +180,13 @@ function initPjax(){
     };
 
     PjaxApp.prototype._loadScripts = function(event, data, status, xhr, options){
+        $(this.content).pjax('a:not([target])', this.content, { fragment: this.content });
         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
-            $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
-            $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
-            $existingScripts = $('script[src]'),
-            $existingTemplates = $('script[type="text/template"]');
-            console.log($scripts);
+        $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
+        $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
+        $existingScripts = $('script[src]'),
+        $existingTemplates = $('script[type="text/template"]');
+        console.log($scripts);
 
         //append templates first as they are used by scripts
         $templates.each(function() {
