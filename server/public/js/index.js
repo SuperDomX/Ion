@@ -1,35 +1,37 @@
 $(function(){
     function pageLoad(){
-      nv.addGraph(function() {
-          var chart = nv.models.lineChart()
-              .useInteractiveGuideline(true)
-              .margin({top: 0, bottom: 25, left: 25, right: 0})
-              //.showLegend(false)
-              .color([
-                  $orange, '#cf6d51'
-                  //'#618fb0', '#61b082'
-              ]);
+      var vChart = function() {
+        var chart = nv.models.lineChart()
+          .useInteractiveGuideline(true)
+          .margin({top: 0, bottom: 25, left: 25, right: 0})
+          //.showLegend(false)
+          .color([
+              $orange, '#cf6d51'
+              //'#618fb0', '#61b082'
+          ]);
 
-          chart.legend.margin({top: 3});
+        chart.legend.margin({top: 3});
 
-          chart.yAxis
-              .showMaxMin(false)
-              .tickFormat(d3.format(',.f'));
+        chart.yAxis
+          .showMaxMin(false)
+          .tickFormat(d3.format(',.f'));
 
-          chart.xAxis
-              .showMaxMin(false)
-              .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-          var data = testData(['Unique', 'Visits'], 30);
-          data[0].area = true;
-          d3.select('#visits-chart svg')
-              .datum(data)
-              .transition().duration(500)
-              .call(chart);
+        chart.xAxis
+          .showMaxMin(false)
+          .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
+        var data = testData(['Unique', 'Visits'], 30);
+        data[0].area = true;
+        d3.select('#visits-chart svg')
+          .datum(data)
+          .transition().duration(500)
+          .call(chart);
 
-          PjaxApp.onResize(chart.update);
+        PjaxApp.onResize(chart.update);
 
-          return chart;
-      });
+        return chart;
+      }
+      nv.addGraph(vChart);
+
 
       /* Sparklines can also take their values from the first argument
         passed to the sparkline() function */
@@ -38,16 +40,16 @@ $(function(){
       }
       var values = [[],[],[],[],[]],
           options = {
-              width: '150px',
-              height: '30px',
-              lineColor: $white,
-              lineWidth: '2',
-              spotRadius: '2',
-              highlightLineColor: $gray,
-              highlightSpotColor: $gray,
-              spotColor: false,
-              minSpotColor: false,
-              maxSpotColor: false
+            width: '150px',
+            height: '30px',
+            lineColor: $white,
+            lineWidth: '2',
+            spotRadius: '2',
+            highlightLineColor: $gray,
+            highlightSpotColor: $gray,
+            spotColor: false,
+            minSpotColor: false,
+            maxSpotColor: false
           };
       for (var i = 0; i < values.length; i++){
           values[i] = [10 + randomValue(), 15 + randomValue(), 20 + randomValue(), 15 + randomValue(), 25 + randomValue(),

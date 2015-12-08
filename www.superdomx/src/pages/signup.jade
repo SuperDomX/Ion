@@ -2,12 +2,10 @@ extends layout
 
 block content
   .content
-    .github-fork-ribbon-wrapper.right
-      .github-fork-ribbon(style='background-color: #333;')
-        a(href="https://github.com/braitsch/node-login") View On Github
-
-  include account
-  include modals/alert
+    .single-widget-container
+      .widget.login-widget
+        include account
+        include modals/alert
 
 block scripts
   script(src='/js/views/signup.js')

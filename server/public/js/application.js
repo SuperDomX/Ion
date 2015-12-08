@@ -180,7 +180,6 @@ function initPjax(){
     };
 
     PjaxApp.prototype._loadScripts = function(event, data, status, xhr, options){
-        $(this.content).pjax('a:not([target])', this.content, { fragment: this.content });
         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
         $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
         $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
@@ -276,6 +275,8 @@ function initPjax(){
             );
         }
     };
+      $("[data-placement]").tooltip();
+      $(this.content).pjax('a:not([target])', this.content, { fragment: this.content });
 
     window.PjaxApp = new PjaxApp();
 }

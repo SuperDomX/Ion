@@ -23,7 +23,7 @@ function view(ctrl) {
         <form id="search-form" class="navbar-form pull-left" role="search">
           <input type="search" class="form-control search-query" placeholder="Search"/>
         </form>
-        <ul class="nav navbar-nav navbar-left">
+        <ul class="nav navbar-nav navbar-right pull-right">
           <li class="visible-phone-landscape">
             <a href="#" id="search-toggle">
                 <i class="fa fa-search"></i>
@@ -194,7 +194,12 @@ function view(ctrl) {
                   <i class="fa fa-bars"></i>
               </a>
           </li>
-          <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+          <li class="hidden-xs">
+            <a 
+              data-placement="bottom" 
+              data-original-title="Sign Out" 
+              href="login">
+              <i class="fa fa-close"></i></a></li>
         </ul>
         <div class="notifications pull-right hidden-sm">
             <div class="alert pull-right">

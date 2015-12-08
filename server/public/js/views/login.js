@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  $('.sidebar').hide()
+  $('.navbar').hide();
   var lv = new LoginValidator();
   var lc = new LoginController();
 

@@ -28,6 +28,14 @@ function controller(attrs) {
 function view(ctrl) {
   return (
     <ul id="side-nav" class="side-nav">
+      <li>
+          <a href="/home">
+            <i class="fa fa-home"></i> 
+            <span class="name">
+            Home
+            </span>
+          </a>
+      </li>
       <li class="active">
           <a href="dashboard.html">
             <i class="fa fa-dashboard"></i> 
@@ -44,7 +52,7 @@ function view(ctrl) {
       <Stats/>
       <Special/>
       <li class="">
-        <a href="login">
+        <a href="signout">
           <i class="fa fa-sign-out"></i> 
           <span class="name">Sign Out</span>
         </a>
