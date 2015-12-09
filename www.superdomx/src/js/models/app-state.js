@@ -1,7 +1,10 @@
 import m from 'mithril';
 
 let messages  = m.prop([]);
-let widgets    = m.prop([
+let widgets   = m.prop([]);
+
+
+let widgetss   = m.prop([
   {
     header : 'Visits',
     widget : 'visits',
@@ -25,6 +28,7 @@ let widgets    = m.prop([
 ]);
 
 let appState = {
+
   widgets() {
     return widgets().slice();
   },
